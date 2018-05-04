@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SCA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_SCA_DE0|SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ajh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_01p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0" CBX_FILE_NAME="mult_r4t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

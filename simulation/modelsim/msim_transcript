@@ -1,0 +1,476 @@
+# ERROR: No extended dataflow license exists
+# do SCA_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying /home/julian/altera/13.0.1/modelsim_ase/linux/../modelsim.ini
+# 
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/types.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package SCA_types
+# -- Compiling package body SCA_types
+# -- Loading package SCA_types
+# ** Warning: /home/julian/altera/13.0.1/quartus/bin/types.vhd(36): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/altera/13.0.1/quartus/bin/types.vhd(37): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/altera/13.0.1/quartus/bin/types.vhd(38): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/altera/13.0.1/quartus/bin/types.vhd(39): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/altera/13.0.1/quartus/bin/types.vhd(49): (vcom-1200) Function "decode_opc" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/altera/13.0.1/quartus/bin/types.vhd(53): (vcom-1200) Function "decode_opr" return type index bounds do not match RETURN value index bounds.
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package types
+# -- Compiling package body types
+# -- Loading package types
+# ** Warning: /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd(33): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd(34): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd(35): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd(36): (vcom-1200) Function "alu_func" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd(46): (vcom-1200) Function "decode_opc" return type index bounds do not match RETURN value index bounds.
+# ** Warning: /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd(50): (vcom-1200) Function "decode_opr" return type index bounds do not match RETURN value index bounds.
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/convDisp7.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package convdisp7
+# -- Compiling package body convdisp7
+# -- Loading package convdisp7
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity single_port_ram_mega_function
+# -- Compiling architecture SYN of single_port_ram_mega_function
+# vcom -93 -work work {/home/julian/Downloads/top_SCA_DE0.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity top_SCA_DE0
+# -- Compiling architecture struct of top_SCA_DE0
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/spX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity spX
+# -- Compiling architecture behavior of spX
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity register_std
+# -- Compiling architecture behavior of register_std
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/rb1X.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity rb1X
+# -- Compiling architecture behavior of rb1X
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/rb0X.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity rb0X
+# -- Compiling architecture behavior of rb0X
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/processor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity processor
+# -- Compiling architecture behavior of processor
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/pcX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity pcX
+# -- Compiling architecture behavior of pcX
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity mux_alu_in
+# -- Compiling architecture behavior of mux_alu_in
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/mux_address.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity mux_address
+# -- Compiling architecture behavior of mux_address
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity instruction_register
+# -- Compiling architecture behavior of instruction_register
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity demux_alu_out
+# -- Compiling architecture behavior of demux_alu_out
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/decoder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity decoder
+# -- Compiling architecture behavior of decoder
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/alu.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package types
+# -- Compiling entity alu
+# -- Compiling architecture behavior of alu
+# vcom -93 -work work {/home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity absolute_register
+# -- Compiling architecture behavior of absolute_register
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity memory
+# -- Compiling architecture behv of memory
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/address_decoder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity address_decoder
+# -- Compiling architecture table of address_decoder
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/LED_IO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity LED_IO
+# -- Compiling architecture reg of LED_IO
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/HEX_IO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package convdisp7
+# -- Loading package SCA_types
+# -- Compiling entity HEX_IO
+# -- Compiling architecture registered of HEX_IO
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/key_IO.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity Key_IO
+# -- Compiling architecture reg of key_IO
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Loading package convdisp7
+# -- Compiling entity SCA
+# -- Compiling architecture struct of SCA
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/dBus2Pcr_MUX.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity dBus2Pcr_MUX
+# -- Compiling architecture buffered of dBus2Pcr_MUX
+# vcom -93 -work work {/home/julian/Dokumente/SmallComputerArchitecture_restored/control_unit_2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package SCA_types
+# -- Compiling entity control_unit_2
+# -- Compiling architecture behavior of control_unit_2
+# 
+vsim work.top_sca_de0
+# vsim work.top_sca_de0 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sca_types(body)
+# Loading work.top_sca_de0(struct)
+# Loading work.convdisp7(body)
+# Loading work.sca(struct)
+# Loading work.processor(behavior)
+# Loading work.register_std(behavior)
+# Loading work.mux_address(behavior)
+# Loading work.mux_alu_in(behavior)
+# Loading work.types(body)
+# Loading work.alu(behavior)
+# Loading work.demux_alu_out(behavior)
+# Loading work.instruction_register(behavior)
+# Loading work.decoder(behavior)
+# Loading work.control_unit_2(behavior)
+# Loading work.absolute_register(behavior)
+# Loading work.spx(behavior)
+# Loading work.pcx(behavior)
+# Loading work.rb0x(behavior)
+# Loading work.rb1x(behavior)
+# Loading work.memory(behv)
+# Loading work.single_port_ram_mega_function(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.address_decoder(table)
+# Loading work.dbus2pcr_mux(buffered)
+# Loading work.led_io(reg)
+# Loading work.hex_io(registered)
+# Loading work.key_io(reg)
+# ** Warning: (vsim-8683) Uninitialized out port /top_sca_de0/mySCA/ac_test(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /top_sca_de0/mySCA/ir_test(31 downto 28) has no driver.
+# This port will contribute value (UUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /top_sca_de0/mySCA/ir_test(27 downto 6) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /top_sca_de0/mySCA/ir_test(5 downto 0) has no driver.
+# This port will contribute value (UUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /top_sca_de0/mySCA/pc_test(31 downto 10) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /top_sca_de0/mySCA/pc_test(9 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUU) to the signal network.
+add wave -position insertpoint  \
+sim:/top_sca_de0/CLOCK_50 \
+sim:/top_sca_de0/BUTTON \
+sim:/top_sca_de0/SW \
+sim:/top_sca_de0/HEX3_D \
+sim:/top_sca_de0/HEX2_D \
+sim:/top_sca_de0/HEX1_D \
+sim:/top_sca_de0/HEX0_D \
+sim:/top_sca_de0/LEDG \
+sim:/top_sca_de0/ac_test \
+sim:/top_sca_de0/ir_test \
+sim:/top_sca_de0/addr_test \
+sim:/top_sca_de0/pc_test \
+sim:/top_sca_de0/reset \
+sim:/top_sca_de0/clock \
+sim:/top_sca_de0/ledSCA
+force -freeze sim:/top_sca_de0/CLOCK_50 1 0, 0 {50 ps} -r 100
+force -freeze sim:/top_sca_de0/SW 0000000000 0
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top_sca_de0/mySCA/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 100 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ps  Iteration: 5  Instance: /top_sca_de0/mySCA/addrDec
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 200 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 11600 ps  Iteration: 3  Instance: /top_sca_de0/mySCA/addrDec
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11600 ps  Iteration: 4  Instance: /top_sca_de0/mySCA/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11700 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 11700 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11700 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 11700 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11700 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 11700 ps  Iteration: 2  Instance: /top_sca_de0/mySCA/mem/sprwi/altsyncram_component
+force -freeze sim:/top_sca_de0/SW 0000000001 0
+run
+add wave -position insertpoint  \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/clk \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/instruction_in \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/spx_pcx_in \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/absolute_in \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/alu_in1 \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/alu_in2 \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/alu_out \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/RESET \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/register_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/mux_alu_in_ctrl0 \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/mux_alu_in_ctrl1 \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/demux_alu_out_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/mux_address_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/alu_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/absolute_register \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/instruction_register_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/spx_reset \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/spx_decrement \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/pcx_reset \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/pcx_increment \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/readMemory \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/writeMemory \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/spX_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/pcX_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/rb0X_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/rb1X_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/absolute_register_ctrl \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/CURRENT_STATE \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/NEXT_STATE \
+sim:/top_sca_de0/mySCA/prc/control_unit_pm/RESET_STATE
+run
+run
+run
+run
+run
+run

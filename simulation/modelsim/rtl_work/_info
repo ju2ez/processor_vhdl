@@ -1,0 +1,1017 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/julian/Dokumente/SmallComputerArchitecture_restored/simulation/modelsim
+Eabsolute_register
+Z1 w1496489160
+Z2 DPx4 work 9 sca_types 0 22 mif2=@>^@T<;bFKmj3XZ13
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 d/home/julian/Dokumente/SmallComputerArchitecture_restored/simulation/modelsim
+Z7 8/home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd
+Z8 F/home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd
+l0
+L10
+V6X54B4h5NJ:8Hh[eW^W0X0
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1498567571.659796
+Z11 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd|
+Z12 !s107 /home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 mnQ14nooP3XVIl]c[K<GC0
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 17 absolute_register 0 22 6X54B4h5NJ:8Hh[eW^W0X0
+l25
+L20
+VAETZ=4TWO6>FFlC[7<R1h1
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 MU575Kg4K;B^g<UjcjVMX3
+!i10b 1
+Eaddress_decoder
+Z15 w1492714630
+R2
+R3
+R4
+R5
+R6
+Z16 8/home/julian/Dokumente/SmallComputerArchitecture_restored/address_decoder.vhd
+Z17 F/home/julian/Dokumente/SmallComputerArchitecture_restored/address_decoder.vhd
+l0
+L8
+VZcE96f]B?4SSdDV[bi^Qb0
+R9
+31
+Z18 !s108 1498567571.706859
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/address_decoder.vhd|
+Z20 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/address_decoder.vhd|
+R13
+R14
+!s100 V1XOG?Lo:J=RgiTDGVcQE1
+!i10b 1
+Atable
+R2
+R3
+R4
+R5
+DEx4 work 15 address_decoder 0 22 ZcE96f]B?4SSdDV[bi^Qb0
+l25
+L17
+V_g5NC=5<MJVjc5=4nEUH>1
+R9
+31
+R18
+R19
+R20
+R13
+R14
+!s100 ggO3W^WQEIc6F0nehl>3?1
+!i10b 1
+Ealu
+Z21 w1496817035
+Z22 DPx4 work 5 types 0 22 8ZaHdLn5ji2mPdgWLPm313
+R3
+R4
+R5
+R6
+Z23 8/home/julian/altera/13.0.1/quartus/bin/alu.vhd
+Z24 F/home/julian/altera/13.0.1/quartus/bin/alu.vhd
+l0
+L10
+V[k;FlkzL^^N8@kWkF:AZ91
+R9
+31
+Z25 !s108 1498567571.635294
+Z26 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/alu.vhd|
+Z27 !s107 /home/julian/altera/13.0.1/quartus/bin/alu.vhd|
+R13
+R14
+!s100 a@E6Y4mzY]NgoSCk1zAkE2
+!i10b 1
+Abehavior
+R22
+R3
+R4
+R5
+DEx4 work 3 alu 0 22 [k;FlkzL^^N8@kWkF:AZ91
+l37
+L29
+V8IoF7GXWjXd729_JEYO073
+R9
+31
+R25
+R26
+R27
+R13
+R14
+!s100 5<gRk:;`K4J1G4fHL>E:k0
+!i10b 1
+Econtrol_unit_2
+Z28 w1498468000
+R2
+R3
+R4
+R5
+R6
+Z29 8/home/julian/Dokumente/SmallComputerArchitecture_restored/control_unit_2.vhd
+Z30 F/home/julian/Dokumente/SmallComputerArchitecture_restored/control_unit_2.vhd
+l0
+L9
+V8a2Zdm];<P:GhaSE74`;?3
+!s100 ?zl?4^boFg;37fQ@D0ll42
+R9
+31
+!i10b 1
+Z31 !s108 1498567571.848601
+Z32 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/control_unit_2.vhd|
+Z33 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/control_unit_2.vhd|
+R13
+R14
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 14 control_unit_2 0 22 8a2Zdm];<P:GhaSE74`;?3
+l88
+L51
+VfKbCKT0ST2c;_<>];bBV<1
+!s100 `Zmf<8XK:AD9AANZN130_1
+R9
+31
+!i10b 1
+R31
+R32
+R33
+R13
+R14
+Pconvdisp7
+R4
+R5
+Z34 w1498148786
+R6
+Z35 8/home/julian/Dokumente/SmallComputerArchitecture_restored/convDisp7.vhd
+Z36 F/home/julian/Dokumente/SmallComputerArchitecture_restored/convDisp7.vhd
+l0
+L4
+VYd`1kFR`B1=6;ihWYUajI2
+R9
+31
+b1
+Z37 !s108 1498567570.986789
+Z38 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/convDisp7.vhd|
+Z39 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/convDisp7.vhd|
+R13
+R14
+!s100 97T0IQoXgJhI`EFz4m3iZ2
+!i10b 1
+Bbody
+Z40 DPx4 work 9 convdisp7 0 22 Yd`1kFR`B1=6;ihWYUajI2
+R4
+R5
+l0
+L9
+V^^CSJ690=B43W1TNdVIm83
+R9
+31
+R37
+R38
+R39
+R13
+R14
+nbody
+!s100 kiHDjB@fznQzj1?@64VTl1
+!i10b 1
+Edbus2pcr_mux
+Z41 w1494423673
+R2
+R3
+R4
+R5
+R6
+Z42 8/home/julian/Dokumente/SmallComputerArchitecture_restored/dBus2Pcr_MUX.vhd
+Z43 F/home/julian/Dokumente/SmallComputerArchitecture_restored/dBus2Pcr_MUX.vhd
+l0
+L11
+V[e90O=g=o_NJcTm3z@zGI1
+R9
+31
+Z44 !s108 1498567571.827572
+Z45 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/dBus2Pcr_MUX.vhd|
+Z46 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/dBus2Pcr_MUX.vhd|
+R13
+R14
+!s100 cH8j_M@lbX7X;8En9`UD21
+!i10b 1
+Abuffered
+R2
+R3
+R4
+R5
+DEx4 work 12 dbus2pcr_mux 0 22 [e90O=g=o_NJcTm3z@zGI1
+l19
+L18
+VdafX8]ARI^LzLN<U_jDQF3
+R9
+31
+R44
+R45
+R46
+R13
+R14
+!s100 K`cCb<mNHI?0VbX58cS5U3
+!i10b 1
+Edecoder
+Z47 w1496812881
+R2
+R3
+R4
+R5
+R6
+Z48 8/home/julian/altera/13.0.1/quartus/bin/decoder.vhd
+Z49 F/home/julian/altera/13.0.1/quartus/bin/decoder.vhd
+l0
+L9
+V?3STk>GbXP>8TfBf=KoX;3
+R9
+31
+Z50 !s108 1498567571.611425
+Z51 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/decoder.vhd|
+Z52 !s107 /home/julian/altera/13.0.1/quartus/bin/decoder.vhd|
+R13
+R14
+!s100 ma^:bb[gOEGdiM4eG<55o3
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 7 decoder 0 22 ?3STk>GbXP>8TfBf=KoX;3
+l40
+L35
+VbGQ5I_Ph_@]SdT5HUZkoH1
+R9
+31
+R50
+R51
+R52
+R13
+R14
+!s100 kmi7c?Jzjm_G<_JdP?`W11
+!i10b 1
+Edemux_alu_out
+Z53 w1497197952
+R2
+R3
+R4
+R5
+R6
+Z54 8/home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd
+Z55 F/home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd
+l0
+L10
+VCGnhOnAYAVzlLC[YR<2`n3
+R9
+31
+Z56 !s108 1498567571.587876
+Z57 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd|
+Z58 !s107 /home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd|
+R13
+R14
+!s100 YfN>g;JfL@?5K5;md_V>z1
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 13 demux_alu_out 0 22 CGnhOnAYAVzlLC[YR<2`n3
+l30
+L22
+V`4UU?FKH[=n0c8dG00LkH1
+R9
+31
+R56
+R57
+R58
+R13
+R14
+!s100 QO]?OY=HFc;SSOBzD>M6R3
+!i10b 1
+Ehex_io
+Z59 w1498150567
+R2
+R40
+R3
+R4
+R5
+R6
+Z60 8/home/julian/Dokumente/SmallComputerArchitecture_restored/HEX_IO.vhd
+Z61 F/home/julian/Dokumente/SmallComputerArchitecture_restored/HEX_IO.vhd
+l0
+L9
+VPFJU@^K6`e4EUNJ`MoP;k0
+R9
+31
+Z62 !s108 1498567571.753894
+Z63 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/HEX_IO.vhd|
+Z64 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/HEX_IO.vhd|
+R13
+R14
+!s100 FZX=C3S^L=GZ3`iz[ML=F3
+!i10b 1
+Aregistered
+R2
+R40
+R3
+R4
+R5
+DEx4 work 6 hex_io 0 22 PFJU@^K6`e4EUNJ`MoP;k0
+l22
+L18
+V;;DJY57N<4ReJQ5i`N@;V2
+R9
+31
+R62
+R63
+R64
+R13
+R14
+!s100 >X46d4ZaV5XFBeVKjGFn31
+!i10b 1
+Einstruction_register
+Z65 w1498155156
+R2
+R3
+R4
+R5
+R6
+Z66 8/home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd
+Z67 F/home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd
+l0
+L9
+V1>SFanznSDbfPd^mYCmQS1
+R9
+31
+Z68 !s108 1498567571.565199
+Z69 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd|
+Z70 !s107 /home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd|
+R13
+R14
+!s100 ;KeMkQ5IdIAMWk>>]kj@B3
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 20 instruction_register 0 22 1>SFanznSDbfPd^mYCmQS1
+l24
+L19
+V7`CI_e?BZo@GmL3FH2cS70
+R9
+31
+R68
+R69
+R70
+R13
+R14
+!s100 Md?g2aRKICIlhV_77Qic03
+!i10b 1
+Ekey_io
+Z71 w1494447557
+R2
+R3
+R4
+R5
+R6
+Z72 8/home/julian/Dokumente/SmallComputerArchitecture_restored/key_IO.vhd
+Z73 F/home/julian/Dokumente/SmallComputerArchitecture_restored/key_IO.vhd
+l0
+L8
+V9B[kL:T5k53Z`64XE0k3b3
+R9
+31
+Z74 !s108 1498567571.777935
+Z75 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/key_IO.vhd|
+Z76 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/key_IO.vhd|
+R13
+R14
+!s100 3@Lo=^PXGjeQmKKe9^B5k2
+!i10b 1
+Areg
+R2
+R3
+R4
+R5
+DEx4 work 6 key_io 0 22 9B[kL:T5k53Z`64XE0k3b3
+l17
+L15
+Vmkn3:`7lgKGJldZB_H<D=2
+R9
+31
+R74
+R75
+R76
+R13
+R14
+!s100 H0FnDigS>Z1H>Tb[EJF4f1
+!i10b 1
+Eled_io
+Z77 w1494433197
+R2
+R3
+R4
+R5
+R6
+Z78 8/home/julian/Dokumente/SmallComputerArchitecture_restored/LED_IO.vhd
+Z79 F/home/julian/Dokumente/SmallComputerArchitecture_restored/LED_IO.vhd
+l0
+L8
+Ve5VcHSTZEO^llgKEfN>gO3
+R9
+31
+Z80 !s108 1498567571.730544
+Z81 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/LED_IO.vhd|
+Z82 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/LED_IO.vhd|
+R13
+R14
+!s100 UMDQ7dZXV[`oi7P?a6]R71
+!i10b 1
+Areg
+R2
+R3
+R4
+R5
+DEx4 work 6 led_io 0 22 e5VcHSTZEO^llgKEfN>gO3
+l15
+L14
+VEniLgaJRI2;`oYmMB77o90
+R9
+31
+R80
+R81
+R82
+R13
+R14
+!s100 Fj]5j>iQJj[NDL:I=]efb3
+!i10b 1
+Ememory
+Z83 w1497968615
+R2
+R3
+R4
+R5
+R6
+Z84 8/home/julian/Dokumente/SmallComputerArchitecture_restored/memory.vhd
+Z85 F/home/julian/Dokumente/SmallComputerArchitecture_restored/memory.vhd
+l0
+L11
+VBkoc]8S>O=J2Z6z3C?LNC1
+R9
+31
+Z86 !s108 1498567571.683091
+Z87 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/memory.vhd|
+Z88 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/memory.vhd|
+R13
+R14
+!s100 WlPWL=9:Dai]jhYWgO8KW2
+!i10b 1
+Abehv
+R2
+R3
+R4
+R5
+DEx4 work 6 memory 0 22 Bkoc]8S>O=J2Z6z3C?LNC1
+l45
+L21
+V>IT6X0GMWMeIm@?`3>N0^3
+R9
+31
+R86
+R87
+R88
+R13
+R14
+!s100 bo8B3bCF640FL2Af?EG742
+!i10b 1
+Emux_address
+Z89 w1495626274
+R2
+R3
+R4
+R5
+R6
+Z90 8/home/julian/altera/13.0.1/quartus/bin/mux_address.vhd
+Z91 F/home/julian/altera/13.0.1/quartus/bin/mux_address.vhd
+l0
+L10
+VVfE3nDaTXb;XPQ3_JmSM40
+R9
+31
+Z92 !s108 1498567571.541319
+Z93 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/mux_address.vhd|
+Z94 !s107 /home/julian/altera/13.0.1/quartus/bin/mux_address.vhd|
+R13
+R14
+!s100 j<i=`mj<FY3aBZ[;=Bf^R1
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 11 mux_address 0 22 VfE3nDaTXb;XPQ3_JmSM40
+l39
+L31
+V1RE^E9Gl2neldB>Q?OP7D2
+R9
+31
+R92
+R93
+R94
+R13
+R14
+!s100 @`89mjO=ndU`M5Y6]I0Qj3
+!i10b 1
+Emux_alu_in
+Z95 w1495548802
+R2
+R3
+R4
+R5
+R6
+Z96 8/home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd
+Z97 F/home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd
+l0
+L9
+V0PVUSN8jnZ70dCY<7l?4G2
+R9
+31
+Z98 !s108 1498567571.517680
+Z99 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd|
+Z100 !s107 /home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd|
+R13
+R14
+!s100 9BHHb8=SMcZ_j9;1;UmN30
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 10 mux_alu_in 0 22 0PVUSN8jnZ70dCY<7l?4G2
+l36
+L30
+Vd@l@DJm11VcdhM9PXZzXS3
+R9
+31
+R98
+R99
+R100
+R13
+R14
+!s100 LbRXIjJP0g9D=U<OPR2zE2
+!i10b 1
+Epcx
+Z101 w1496768923
+R2
+R3
+R4
+R5
+R6
+Z102 8/home/julian/altera/13.0.1/quartus/bin/pcX.vhd
+Z103 F/home/julian/altera/13.0.1/quartus/bin/pcX.vhd
+l0
+L9
+VhQkI[`<1zRQHV6JBT8Q`a2
+R9
+31
+Z104 !s108 1498567571.258375
+Z105 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/pcX.vhd|
+Z106 !s107 /home/julian/altera/13.0.1/quartus/bin/pcX.vhd|
+R13
+R14
+!s100 mUh;]_FJ5>nQ5zVaGZ<[93
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 3 pcx 0 22 hQkI[`<1zRQHV6JBT8Q`a2
+l28
+L23
+VOZT?2?:P>2nLf;[NEC=@V3
+R9
+31
+R104
+R105
+R106
+R13
+R14
+!s100 jieNGHSo_M6d4JmfBMdi;0
+!i10b 1
+Eprocessor
+Z107 w1497363390
+R2
+R3
+R4
+R5
+R6
+Z108 8/home/julian/altera/13.0.1/quartus/bin/processor.vhd
+Z109 F/home/julian/altera/13.0.1/quartus/bin/processor.vhd
+l0
+L10
+VZeRfXT<]:AZnRBGSI=1Z[2
+R9
+31
+Z110 !s108 1498567571.223470
+Z111 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/processor.vhd|
+Z112 !s107 /home/julian/altera/13.0.1/quartus/bin/processor.vhd|
+R13
+R14
+!s100 =3MZ=C88cL:Wd77cn8;E62
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 9 processor 0 22 ZeRfXT<]:AZnRBGSI=1Z[2
+l404
+L37
+VAa?8mYf[EjPKRacW@ZlUA0
+R9
+31
+R110
+R111
+R112
+R13
+R14
+!s100 @^D?332CY2llFIAFBQRQ50
+!i10b 1
+Erb0x
+Z113 w1495548941
+R2
+R3
+R4
+R5
+R6
+Z114 8/home/julian/altera/13.0.1/quartus/bin/rb0X.vhd
+Z115 F/home/julian/altera/13.0.1/quartus/bin/rb0X.vhd
+l0
+L9
+V6ZaELCbWLgJfk4OGNIfQC0
+R9
+31
+Z116 !s108 1498567571.202676
+Z117 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/rb0X.vhd|
+Z118 !s107 /home/julian/altera/13.0.1/quartus/bin/rb0X.vhd|
+R13
+R14
+!s100 gVBCHdOhY;g9F=>NA1O`A2
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 4 rb0x 0 22 6ZaELCbWLgJfk4OGNIfQC0
+l26
+L21
+VR2J8C;PQFN6oDUKQ=Zknm3
+R9
+31
+R116
+R117
+R118
+R13
+R14
+!s100 jA]2<LYb93C=a2CV1nFbH3
+!i10b 1
+Erb1x
+R113
+R2
+R3
+R4
+R5
+R6
+Z119 8/home/julian/altera/13.0.1/quartus/bin/rb1X.vhd
+Z120 F/home/julian/altera/13.0.1/quartus/bin/rb1X.vhd
+l0
+L9
+V?5Vb]C;1Yz>Wb_jc2Lg813
+R9
+31
+Z121 !s108 1498567571.177467
+Z122 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/rb1X.vhd|
+Z123 !s107 /home/julian/altera/13.0.1/quartus/bin/rb1X.vhd|
+R13
+R14
+!s100 U;8[ih3XkP5SWzNT@eZgG1
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 4 rb1x 0 22 ?5Vb]C;1Yz>Wb_jc2Lg813
+l26
+L21
+V?6H_j=Q44AMLkIBjm1@]?1
+R9
+31
+R121
+R122
+R123
+R13
+R14
+!s100 02OziYPGH7coIl[b0H=@01
+!i10b 1
+Eregister_std
+Z124 w1498160585
+R2
+R3
+R4
+R5
+R6
+Z125 8/home/julian/altera/13.0.1/quartus/bin/register.vhd
+Z126 F/home/julian/altera/13.0.1/quartus/bin/register.vhd
+l0
+L9
+VdTEc3<?bj1Z^PcIPLYb>n1
+R9
+31
+Z127 !s108 1498567571.145290
+Z128 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/register.vhd|
+Z129 !s107 /home/julian/altera/13.0.1/quartus/bin/register.vhd|
+R13
+R14
+!s100 inHJTimnYRUSoZGF2bSm_2
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 12 register_std 0 22 dTEc3<?bj1Z^PcIPLYb>n1
+l24
+L19
+VdPWW_;_b]TNo^m8k]=4iZ1
+R9
+31
+R127
+R128
+R129
+R13
+R14
+!s100 VdS?6m71RAG5O14W_3aUf1
+!i10b 1
+Esca
+Z130 w1498152131
+R40
+R2
+R3
+R4
+R5
+R6
+Z131 8/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA.vhd
+Z132 F/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA.vhd
+l0
+L11
+V^Hjjd?ZAV[C5a3I4oA;W83
+R9
+31
+Z133 !s108 1498567571.801910
+Z134 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA.vhd|
+Z135 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA.vhd|
+R13
+R14
+!s100 aMLJRUHmdCa@S4@R5TYnA3
+!i10b 1
+Astruct
+R40
+R2
+R3
+R4
+R5
+DEx4 work 3 sca 0 22 ^Hjjd?ZAV[C5a3I4oA;W83
+l86
+L25
+V_kEiNCn<>YiHm<N^04Yf]2
+R9
+31
+R133
+R134
+R135
+R13
+R14
+!s100 h4UjnD<=hY<3d>j0iN`Xb3
+!i10b 1
+Psca_types
+R3
+R4
+R5
+Z136 w1495548674
+R6
+Z137 8/home/julian/altera/13.0.1/quartus/bin/types.vhd
+Z138 F/home/julian/altera/13.0.1/quartus/bin/types.vhd
+l0
+L9
+Vmif2=@>^@T<;bFKmj3XZ13
+R9
+31
+b1
+Z139 !s108 1498567570.786284
+Z140 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/types.vhd|
+Z141 !s107 /home/julian/altera/13.0.1/quartus/bin/types.vhd|
+R13
+R14
+!s100 BS7R5O[T2>oE9]Kz>SSI;1
+!i10b 1
+Bbody
+R2
+R3
+R4
+R5
+l0
+L28
+VlBKaTO4lgSX5UE?lnnfDc1
+R9
+31
+R139
+R140
+R141
+R13
+R14
+nbody
+!s100 []3222][?A6JNaYlY@<482
+!i10b 1
+Esingle_port_ram_mega_function
+Z142 w1498469397
+R4
+R5
+R6
+Z143 8/home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd
+Z144 F/home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd
+l0
+L42
+V__1G]@ZZ=<^TF`Yh:cBnD1
+R9
+31
+Z145 !s108 1498567571.005866
+Z146 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd|
+Z147 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd|
+R13
+R14
+!s100 z8T]lK:MS5En_WFz]DYH_2
+!i10b 1
+Asyn
+R4
+R5
+DEx4 work 29 single_port_ram_mega_function 0 22 __1G]@ZZ=<^TF`Yh:cBnD1
+l87
+L54
+VETkD8UJabjQQM<L1e=E:;3
+R9
+31
+R145
+R146
+R147
+R13
+R14
+!s100 N>`242LRQjX7W04SlN:j@3
+!i10b 1
+Espx
+Z148 w1496819408
+R2
+R3
+R4
+R5
+R6
+Z149 8/home/julian/altera/13.0.1/quartus/bin/spX.vhd
+Z150 F/home/julian/altera/13.0.1/quartus/bin/spX.vhd
+l0
+L9
+Vonz?0gM_coW02nLMF<NbT1
+R9
+31
+Z151 !s108 1498567571.087487
+Z152 !s90 -reportprogress|300|-93|-work|work|/home/julian/altera/13.0.1/quartus/bin/spX.vhd|
+Z153 !s107 /home/julian/altera/13.0.1/quartus/bin/spX.vhd|
+R13
+R14
+!s100 YUf[F>4hM`jiDXeMzZ3Z;3
+!i10b 1
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 3 spx 0 22 onz?0gM_coW02nLMF<NbT1
+l28
+L23
+V1<4^[>z;E99D9:jV>k4Ah2
+R9
+31
+R151
+R152
+R153
+R13
+R14
+!s100 =o`UblEm1MTaUQ<[1QEa`0
+!i10b 1
+Etop_sca_de0
+Z154 w1498147739
+R2
+R3
+R4
+R5
+R6
+Z155 8/home/julian/Downloads/top_SCA_DE0.vhd
+Z156 F/home/julian/Downloads/top_SCA_DE0.vhd
+l0
+L9
+V3`;8[mTO^?7ZmBZ@_U8Kl0
+R9
+31
+Z157 !s108 1498567571.062178
+Z158 !s90 -reportprogress|300|-93|-work|work|/home/julian/Downloads/top_SCA_DE0.vhd|
+Z159 !s107 /home/julian/Downloads/top_SCA_DE0.vhd|
+R13
+R14
+!s100 n7H60lA9CiH96j8?Qh1IM3
+!i10b 1
+Astruct
+R2
+R3
+R4
+R5
+DEx4 work 11 top_sca_de0 0 22 3`;8[mTO^?7ZmBZ@_U8Kl0
+l39
+L19
+VX?9KX8VMzUcBn?1U@omY]0
+R9
+31
+R157
+R158
+R159
+R13
+R14
+!s100 6ic=h1_g67OeXji;T3mUC0
+!i10b 1
+Ptypes
+R3
+R4
+R5
+Z160 w1494429306
+R6
+Z161 8/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd
+Z162 F/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd
+l0
+L6
+V8ZaHdLn5ji2mPdgWLPm313
+R9
+31
+b1
+Z163 !s108 1498567570.962601
+Z164 !s90 -reportprogress|300|-93|-work|work|/home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd|
+Z165 !s107 /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd|
+R13
+R14
+!s100 F;Lhe_1Od]XKYoL^VL1dG1
+!i10b 1
+Bbody
+R22
+R3
+R4
+R5
+l0
+L25
+VZS66iDWNZ`;a54SiAjbNS1
+R9
+31
+R163
+R164
+R165
+R13
+R14
+nbody
+!s100 e4YH3Bk0GdaQ:?Z?l;E7^0
+!i10b 1

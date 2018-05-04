@@ -1,0 +1,52 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+package types is
+  constant wordwidth: integer := 32;
+  subtype word is signed(wordwidth-1 downto 0);
+  constant addrwidth: integer := 32;
+  subtype address is unsigned(addrwidth-1 downto 0);
+  constant memwidth: integer := 13;
+  constant memsize: integer := 2**memwidth;
+  subtype opcType is std_logic_vector(3 downto 0);
+  function alu_func(opl, opr: word; opc: std_logic_vector(3 downto 0)) return word;
+  function decode_opc(ir: word) return opcType;
+  function decode_opr(ir: word) return address;
+  constant keyfieldsize: integer := 3; -- number of keys, here for Altera/Terasic DE0
+  constant switchfieldsize: integer := 10; -- number of switches
+  constant LEDfieldsize: integer := 10; -- number of LEDs
+  constant HEXfieldsize: integer := 4;  -- number of Hex digits 
+  type MUX_IN_OUT is array (15 downto 0) of WORD;	-- for mux inputs and demux outputs
+  type DE_MUX_OUT is array (15 downto 0) of WORD;
+end types;
+
+package body types is
+  -- alu
+  function alu_func(opl, opr: word; opc: std_logic_vector(3 downto 0)) return word is
+  begin
+    case opc is
+     when "0001" => return opl;
+     when "0011" => return opl + opr;
+     when "0100" => return opr - opl;
+     when "0101" => return opr and opl;
+     when "0110" => return opr or opl;
+     when "0111" => return opr xor opl;
+     when "1000" => return not opr;
+     when "1001" => return opr + 1;
+     when "1010" => return opr - 1;
+     when "1011" => return to_signed(0, wordwidth);
+     when others => return opr;
+    end case;
+   end function;
+	-- decode IR
+   function decode_opc(ir: word) return opcType is
+   begin
+     return std_logic_vector(ir(wordwidth-1 downto wordwidth-4));
+   end decode_opc;
+   function decode_opr(ir: word) return address is
+   begin
+     return ("0000" & (unsigned(std_logic_vector(ir(wordwidth-5 downto 0)))));
+   end function;
+end package body types;

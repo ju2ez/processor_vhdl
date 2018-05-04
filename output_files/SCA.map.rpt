@@ -1,0 +1,1250 @@
+Analysis & Synthesis report for SCA
+Mon Jun 26 11:30:10 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. State Machine - |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState[0]
+ 12. State Machine - |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState[1]
+ 13. State Machine - |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState[2]
+ 14. State Machine - |top_SCA_DE0|SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE
+ 15. User-Specified and Inferred Latches
+ 16. Registers Removed During Synthesis
+ 17. Removed Registers Triggering Further Register Optimizations
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component|altsyncram_ajh1:auto_generated
+ 22. Parameter Settings for User Entity Instance: SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component
+ 23. Parameter Settings for Inferred Entity Instance: SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. lpm_mult Parameter Settings by Entity Instance
+ 27. Port Connectivity Checks: "SCA:mySCA|dBus2Pcr_MUX:dBusMux"
+ 28. Port Connectivity Checks: "SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm"
+ 29. Port Connectivity Checks: "SCA:mySCA"
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jun 26 11:30:10 2017           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; SCA                                             ;
+; Top-level Entity Name              ; top_SCA_DE0                                     ;
+; Family                             ; Cyclone III                                     ;
+; Total logic elements               ; 3,782                                           ;
+;     Total combinational functions  ; 2,794                                           ;
+;     Dedicated logic registers      ; 1,352                                           ;
+; Total registers                    ; 1352                                            ;
+; Total pins                         ; 56                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 262,144                                         ;
+; Embedded Multiplier 9-bit elements ; 6                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; top_SCA_DE0        ; SCA                ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                         ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------+---------+
+; ../../Downloads/top_SCA_DE0.vhd                          ; yes             ; User VHDL File                   ; /home/julian/Downloads/top_SCA_DE0.vhd                                                      ;         ;
+; ../../altera/13.0.1/quartus/bin/types.vhd                ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/types.vhd                                            ;         ;
+; ../../altera/13.0.1/quartus/bin/spX.vhd                  ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/spX.vhd                                              ;         ;
+; ../../altera/13.0.1/quartus/bin/register.vhd             ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/register.vhd                                         ;         ;
+; ../../altera/13.0.1/quartus/bin/rb1X.vhd                 ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/rb1X.vhd                                             ;         ;
+; ../../altera/13.0.1/quartus/bin/rb0X.vhd                 ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/rb0X.vhd                                             ;         ;
+; ../../altera/13.0.1/quartus/bin/processor.vhd            ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/processor.vhd                                        ;         ;
+; ../../altera/13.0.1/quartus/bin/pcX.vhd                  ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/pcX.vhd                                              ;         ;
+; ../../altera/13.0.1/quartus/bin/mux_alu_in.vhd           ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd                                       ;         ;
+; ../../altera/13.0.1/quartus/bin/mux_address.vhd          ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/mux_address.vhd                                      ;         ;
+; ../../altera/13.0.1/quartus/bin/instruction_register.vhd ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd                             ;         ;
+; ../../altera/13.0.1/quartus/bin/demux_alu_out.vhd        ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd                                    ;         ;
+; ../../altera/13.0.1/quartus/bin/decoder.vhd              ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/decoder.vhd                                          ;         ;
+; ../../altera/13.0.1/quartus/bin/alu.vhd                  ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/alu.vhd                                              ;         ;
+; ../../altera/13.0.1/quartus/bin/absolute_register.vhd    ; yes             ; User VHDL File                   ; /home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd                                ;         ;
+; SCA_types.vhd                                            ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA_types.vhd                     ;         ;
+; memory.vhd                                               ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/memory.vhd                        ;         ;
+; address_decoder.vhd                                      ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/address_decoder.vhd               ;         ;
+; LED_IO.vhd                                               ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/LED_IO.vhd                        ;         ;
+; convDisp7.vhd                                            ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/convDisp7.vhd                     ;         ;
+; HEX_IO.vhd                                               ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/HEX_IO.vhd                        ;         ;
+; key_IO.vhd                                               ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/key_IO.vhd                        ;         ;
+; SCA.vhd                                                  ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/SCA.vhd                           ;         ;
+; dBus2Pcr_MUX.vhd                                         ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/dBus2Pcr_MUX.vhd                  ;         ;
+; control_unit_2.vhd                                       ; yes             ; User VHDL File                   ; /home/julian/Dokumente/SmallComputerArchitecture_restored/control_unit_2.vhd                ;         ;
+; SCAMIF.mif                                               ; yes             ; User Memory Initialization File  ; /home/julian/Dokumente/SmallComputerArchitecture_restored/SCAMIF.mif                        ;         ;
+; single_port_ram_mega_function.vhd                        ; yes             ; User Wizard-Generated File       ; /home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd ;         ;
+; altsyncram.tdf                                           ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc                                    ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                                              ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                                           ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; aglobal130.inc                                           ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/aglobal130.inc                   ;         ;
+; a_rdenreg.inc                                            ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                                               ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                                               ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                                             ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_ajh1.tdf                                   ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/altsyncram_ajh1.tdf            ;         ;
+; lpm_divide.tdf                                           ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
+; abs_divider.inc                                          ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
+; sign_div_unsign.inc                                      ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
+; db/lpm_divide_01p.tdf                                    ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/lpm_divide_01p.tdf             ;         ;
+; db/abs_divider_4dg.tdf                                   ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/abs_divider_4dg.tdf            ;         ;
+; db/alt_u_div_t8f.tdf                                     ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/alt_u_div_t8f.tdf              ;         ;
+; db/add_sub_unc.tdf                                       ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/add_sub_unc.tdf                ;         ;
+; db/add_sub_vnc.tdf                                       ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/add_sub_vnc.tdf                ;         ;
+; db/lpm_abs_9v9.tdf                                       ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/lpm_abs_9v9.tdf                ;         ;
+; lpm_mult.tdf                                             ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/lpm_mult.tdf                     ;         ;
+; lpm_add_sub.inc                                          ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/lpm_add_sub.inc                  ;         ;
+; multcore.inc                                             ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/multcore.inc                     ;         ;
+; bypassff.inc                                             ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/bypassff.inc                     ;         ;
+; altshift.inc                                             ; yes             ; Megafunction                     ; /home/julian/altera/13.0.1/quartus/libraries/megafunctions/altshift.inc                     ;         ;
+; db/mult_r4t.tdf                                          ; yes             ; Auto-Generated Megafunction      ; /home/julian/Dokumente/SmallComputerArchitecture_restored/db/mult_r4t.tdf                   ;         ;
++----------------------------------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 3,782  ;
+;                                             ;        ;
+; Total combinational functions               ; 2794   ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 1595   ;
+;     -- 3 input functions                    ; 917    ;
+;     -- <=2 input functions                  ; 282    ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 2035   ;
+;     -- arithmetic mode                      ; 759    ;
+;                                             ;        ;
+; Total registers                             ; 1352   ;
+;     -- Dedicated logic registers            ; 1352   ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 56     ;
+; Total memory bits                           ; 262144 ;
+; Embedded Multiplier 9-bit elements          ; 6      ;
+; Maximum fan-out node                        ; clock  ;
+; Maximum fan-out                             ; 1361   ;
+; Total fan-out                               ; 14442  ;
+; Average fan-out                             ; 3.36   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                    ;
++---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                               ; Library Name ;
++---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |top_SCA_DE0                                            ; 2794 (72)         ; 1352 (23)    ; 262144      ; 6            ; 0       ; 3         ; 56   ; 0            ; |top_SCA_DE0                                                                                                                                                      ; work         ;
+;    |SCA:mySCA|                                          ; 2722 (0)          ; 1329 (0)     ; 262144      ; 6            ; 0       ; 3         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA                                                                                                                                            ; work         ;
+;       |HEX_IO:HexDisp|                                  ; 28 (28)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|HEX_IO:HexDisp                                                                                                                             ; work         ;
+;       |Key_IO:keys|                                     ; 19 (19)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|Key_IO:keys                                                                                                                                ; work         ;
+;       |LED_IO:Leds|                                     ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|LED_IO:Leds                                                                                                                                ; work         ;
+;       |address_decoder:addrDec|                         ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|address_decoder:addrDec                                                                                                                    ; work         ;
+;       |dBus2Pcr_MUX:dBusMux|                            ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|dBus2Pcr_MUX:dBusMux                                                                                                                       ; work         ;
+;       |memory:mem|                                      ; 0 (0)             ; 0 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|memory:mem                                                                                                                                 ; work         ;
+;          |single_port_ram_mega_function:sprwi|          ; 0 (0)             ; 0 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi                                                                                             ; work         ;
+;             |altsyncram:altsyncram_component|           ; 0 (0)             ; 0 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component                                                             ; work         ;
+;                |altsyncram_ajh1:auto_generated|         ; 0 (0)             ; 0 (0)        ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component|altsyncram_ajh1:auto_generated                              ; work         ;
+;       |processor:prc|                                   ; 2609 (0)          ; 1294 (0)     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc                                                                                                                              ; work         ;
+;          |absolute_register:absolute_register_pm|       ; 0 (0)             ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|absolute_register:absolute_register_pm                                                                                       ; work         ;
+;          |alu:alu_pm|                                   ; 1658 (402)        ; 128 (128)    ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm                                                                                                                   ; work         ;
+;             |lpm_divide:Div0|                           ; 1228 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0                                                                                                   ; work         ;
+;                |lpm_divide_01p:auto_generated|          ; 1228 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
+;                   |abs_divider_4dg:divider|             ; 1228 (33)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
+;                      |alt_u_div_t8f:divider|            ; 1087 (1084)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
+;                         |add_sub_unc:add_sub_0|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_unc:add_sub_0 ; work         ;
+;                         |add_sub_vnc:add_sub_1|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
+;                      |lpm_abs_9v9:my_abs_den|           ; 63 (63)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
+;                      |lpm_abs_9v9:my_abs_num|           ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num                      ; work         ;
+;             |lpm_mult:Mult0|                            ; 28 (0)            ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0                                                                                                    ; work         ;
+;                |mult_r4t:auto_generated|                ; 28 (28)           ; 0 (0)        ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0|mult_r4t:auto_generated                                                                            ; work         ;
+;          |control_unit_2:control_unit_pm|               ; 133 (133)         ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|control_unit_2:control_unit_pm                                                                                               ; work         ;
+;          |decoder:decoder_pm|                           ; 49 (49)           ; 66 (66)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|decoder:decoder_pm                                                                                                           ; work         ;
+;          |demux_alu_out:demux_alu_out_pm|               ; 14 (14)           ; 448 (448)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm                                                                                               ; work         ;
+;          |instruction_register:instruction_register_pm| ; 0 (0)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|instruction_register:instruction_register_pm                                                                                 ; work         ;
+;          |mux_address:mux_address_pm|                   ; 65 (65)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_address:mux_address_pm                                                                                                   ; work         ;
+;          |mux_alu_in:mux_alu_in_pm|                     ; 624 (624)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_alu_in:mux_alu_in_pm                                                                                                     ; work         ;
+;          |pcX:pcX_register_pm|                          ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|pcX:pcX_register_pm                                                                                                          ; work         ;
+;          |rb0X:rb0X_register_pm|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|rb0X:rb0X_register_pm                                                                                                        ; work         ;
+;          |rb1X:rb1X_register_pm|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|rb1X:rb1X_register_pm                                                                                                        ; work         ;
+;          |register_std:\GEN_REG:0:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:0:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:1:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:1:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:2:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:2:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:3:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:3:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:4:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:4:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:5:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:5:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:6:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:6:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:7:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:7:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:8:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:8:REGX                                                                                                 ; work         ;
+;          |register_std:\GEN_REG:9:REGX|                 ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|register_std:\GEN_REG:9:REGX                                                                                                 ; work         ;
+;          |spX:spX_register_pm|                          ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_SCA_DE0|SCA:mySCA|processor:prc|spX:spX_register_pm                                                                                                          ; work         ;
++---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                          ;
++------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------------+
+; Name                                                                                                                               ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF        ;
++------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------------+
+; SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component|altsyncram_ajh1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 8192         ; 32           ; --           ; --           ; 262144 ; SCAMIF.mif ;
++------------------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+--------+------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 2           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                               ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                       ; IP Include File                                                                             ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |top_SCA_DE0|SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi ; /home/julian/Dokumente/SmallComputerArchitecture_restored/single_port_ram_mega_function.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------+
+; State Machine - |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState[0]                                  ;
++------------------------+------------------------+------------------------+----------------------+
+; Name                   ; keyState[0].oldPressed ; keyState[0].newPressed ; keyState[0].released ;
++------------------------+------------------------+------------------------+----------------------+
+; keyState[0].released   ; 0                      ; 0                      ; 0                    ;
+; keyState[0].newPressed ; 0                      ; 1                      ; 1                    ;
+; keyState[0].oldPressed ; 1                      ; 0                      ; 1                    ;
++------------------------+------------------------+------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------+
+; State Machine - |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState[1]                                  ;
++------------------------+------------------------+------------------------+----------------------+
+; Name                   ; keyState[1].oldPressed ; keyState[1].newPressed ; keyState[1].released ;
++------------------------+------------------------+------------------------+----------------------+
+; keyState[1].released   ; 0                      ; 0                      ; 0                    ;
+; keyState[1].newPressed ; 0                      ; 1                      ; 1                    ;
+; keyState[1].oldPressed ; 1                      ; 0                      ; 1                    ;
++------------------------+------------------------+------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------+
+; State Machine - |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState[2]                                  ;
++------------------------+------------------------+------------------------+----------------------+
+; Name                   ; keyState[2].oldPressed ; keyState[2].newPressed ; keyState[2].released ;
++------------------------+------------------------+------------------------+----------------------+
+; keyState[2].released   ; 0                      ; 0                      ; 0                    ;
+; keyState[2].newPressed ; 0                      ; 1                      ; 1                    ;
+; keyState[2].oldPressed ; 1                      ; 0                      ; 1                    ;
++------------------------+------------------------+------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_SCA_DE0|SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-----------------------+--------------------+---------------------+--------------------+---------------------+---------------------+---------------------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------------+----------------------+
+; Name                    ; CURRENT_STATE.WAIT_5SEC ; CURRENT_STATE.WAIT_4SEC ; CURRENT_STATE.WAIT_3SEC ; CURRENT_STATE.WAIT_2SEC ; CURRENT_STATE.WAIT_1SEC ; CURRENT_STATE.EXECUTE ; CURRENT_STATE.HALT ; CURRENT_STATE.JUMPZ ; CURRENT_STATE.JUMP ; CURRENT_STATE.TYP_3 ; CURRENT_STATE.TYP_2 ; CURRENT_STATE.TYP_1 ; CURRENT_STATE.STOREA ; CURRENT_STATE.FETCH_8 ; CURRENT_STATE.FETCH_7 ; CURRENT_STATE.FETCH_6 ; CURRENT_STATE.FETCH_5 ; CURRENT_STATE.FETCH_4 ; CURRENT_STATE.FETCH_3 ; CURRENT_STATE.FETCH_2 ; CURRENT_STATE.FETCH_1 ; CURRENT_STATE.INIT ; CURRENT_STATE.RSTATE ;
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-----------------------+--------------------+---------------------+--------------------+---------------------+---------------------+---------------------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------------+----------------------+
+; CURRENT_STATE.RSTATE    ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 0                    ;
+; CURRENT_STATE.INIT      ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1                  ; 1                    ;
+; CURRENT_STATE.FETCH_1   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_2   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_3   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_4   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_5   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_6   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_7   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.FETCH_8   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 1                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.STOREA    ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 1                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.TYP_1     ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 1                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.TYP_2     ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 1                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.TYP_3     ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 1                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.JUMP      ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 1                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.JUMPZ     ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 1                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.HALT      ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 1                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.EXECUTE   ; 0                       ; 0                       ; 0                       ; 0                       ; 0                       ; 1                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.WAIT_1SEC ; 0                       ; 0                       ; 0                       ; 0                       ; 1                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.WAIT_2SEC ; 0                       ; 0                       ; 0                       ; 1                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.WAIT_3SEC ; 0                       ; 0                       ; 1                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.WAIT_4SEC ; 0                       ; 1                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
+; CURRENT_STATE.WAIT_5SEC ; 1                       ; 0                       ; 0                       ; 0                       ; 0                       ; 0                     ; 0                  ; 0                   ; 0                  ; 0                   ; 0                   ; 0                   ; 0                    ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                     ; 0                  ; 1                    ;
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-----------------------+--------------------+---------------------+--------------------+---------------------+---------------------+---------------------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+--------------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                                                  ;
++----------------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------------+
+; Latch Name                                                                       ; Latch Enable Signal                                                      ; Free of Timing Hazards ;
++----------------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------------+
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|writeMemory               ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr2           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_address_ctrl[0]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr4           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_address_ctrl[1]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr4           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[3]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr19          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[2]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr19          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[1]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr19          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[0]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr19          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|rb0X_ctrl                 ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr18          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|spx_decrement             ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|Selector21        ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|spx_reset                 ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr0           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|rb1X_ctrl                 ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr18          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|pcx_reset                 ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr0           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|pcx_increment             ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr9           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|pcX_ctrl                  ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr16          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[3]               ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr24          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[2]               ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr24          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[0]               ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr24          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[1]               ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr24          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[4]               ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr24          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl0[3]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|NEXT_STATE        ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl0[2]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|NEXT_STATE        ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl0[1]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|NEXT_STATE        ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl0[0]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|NEXT_STATE        ; yes                    ;
+; SCA:mySCA|Key_IO:keys|dOut[0]                                                    ; SCA:mySCA|Key_IO:keys|dOut[2]                                            ; yes                    ;
+; SCA:mySCA|dBus2Pcr_MUX:dBusMux|state.switch2Pcr_182                              ; GND                                                                      ; yes                    ;
+; SCA:mySCA|dBus2Pcr_MUX:dBusMux|state.key2Pcr_173                                 ; GND                                                                      ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl1[0]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr28          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl1[1]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr28          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl1[2]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr28          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|mux_alu_in_ctrl1[3]       ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr28          ; yes                    ;
+; SCA:mySCA|Key_IO:keys|dOut[1]                                                    ; SCA:mySCA|Key_IO:keys|dOut[2]                                            ; yes                    ;
+; SCA:mySCA|Key_IO:keys|dOut[2]                                                    ; SCA:mySCA|Key_IO:keys|dOut[2]                                            ; yes                    ;
+; SCA:mySCA|dBus2Pcr_MUX:dBusMux|state.mem2Pcr_191                                 ; GND                                                                      ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|instruction_register_ctrl ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr7           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[0]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register_ctrl    ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr26          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|register_ctrl             ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr13          ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|readMemory                ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|WideOr2           ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[1]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[2]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[3]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[4]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[5]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[6]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[7]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[8]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[9]      ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[10]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[11]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[12]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[13]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[14]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[15]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[16]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[17]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[18]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[19]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register[20]     ; SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register ; yes                    ;
+; Number of user-specified and inferred latches = 58                               ;                                                                          ;                        ;
++----------------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                         ;
++-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+; Register name                                                               ; Reason for Removal                                                           ;
++-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][31]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][30]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][29]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][28]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][27]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][26]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][25]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][24]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][23]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][22]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][21]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][20]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][19]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][18]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][17]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][16]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][15]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][14]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][13]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][12]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][11]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][10]            ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][9]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][8]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][7]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][6]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][5]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][4]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][3]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][2]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][1]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm|Y[12][0]             ; Lost fanout                                                                  ;
+; SCA:mySCA|processor:prc|decoder:decoder_pm|buf[21..31]                      ; Stuck at GND due to stuck port data_in                                       ;
+; SCA:mySCA|processor:prc|decoder:decoder_pm|absolute_register[22..31]        ; Merged with SCA:mySCA|processor:prc|decoder:decoder_pm|absolute_register[21] ;
+; SCA:mySCA|processor:prc|decoder:decoder_pm|absolute_register[21]            ; Stuck at GND due to stuck port data_in                                       ;
+; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[21..31] ; Stuck at GND due to stuck port data_in                                       ;
+; Total Number of Removed Registers = 65                                      ;                                                                              ;
++-----------------------------------------------------------------------------+------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                               ;
++----------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; Register name                                      ; Reason for Removal        ; Registers Removed due to This Register                                   ;
++----------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+; SCA:mySCA|processor:prc|decoder:decoder_pm|buf[21] ; Stuck at GND              ; SCA:mySCA|processor:prc|decoder:decoder_pm|absolute_register[21],        ;
+;                                                    ; due to stuck port data_in ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[21], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[22], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[23], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[24], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[25], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[26], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[27], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[28], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[29], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[30], ;
+;                                                    ;                           ; SCA:mySCA|processor:prc|absolute_register:absolute_register_pm|data[31]  ;
++----------------------------------------------------+---------------------------+--------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1352  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 58    ;
+; Number of registers using Asynchronous Clear ; 145   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1141  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Inverted Register Statistics                                   ;
++------------------------------------------------------+---------+
+; Inverted Register                                    ; Fan out ;
++------------------------------------------------------+---------+
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[1]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[2]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[3]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[4]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[5]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[6]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[7]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[8]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[9]  ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[10] ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[11] ; 4       ;
+; SCA:mySCA|processor:prc|spX:spX_register_pm|data[12] ; 4       ;
+; cnt[17]                                              ; 2       ;
+; cnt[13]                                              ; 2       ;
+; cnt[7]                                               ; 2       ;
+; cnt[21]                                              ; 3       ;
+; cnt[10]                                              ; 3       ;
+; cnt[8]                                               ; 3       ;
+; cnt[5]                                               ; 3       ;
+; cnt[18]                                              ; 3       ;
+; SCA:mySCA|processor:prc|alu:alu_pm|bufint[0]         ; 1       ;
+; SCA:mySCA|processor:prc|alu:alu_pm|bufint[31]        ; 1       ;
+; Total number of inverted registers = 22              ;         ;
++------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|pcX:pcX_register_pm|data[9]                      ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_address:mux_address_pm|Y0[4]                 ;
+; 5:1                ; 17 bits   ; 51 LEs        ; 17 LEs               ; 34 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|decoder:decoder_pm|buf[1]                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|decoder:decoder_pm|mux_alu_in_ctrl1[2]           ;
+; 5:1                ; 21 bits   ; 63 LEs        ; 0 LEs                ; 63 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|decoder:decoder_pm|absolute_register[6]          ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|buf64[7]                              ;
+; 5:1                ; 30 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|bufint[8]                             ;
+; 17:1               ; 4 bits    ; 44 LEs        ; 4 LEs                ; 40 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|decoder:decoder_pm|mux_alu_in_ctrl0[2]           ;
+; 15:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|decoder:decoder_pm|demux_alu_out_ctrl[1]         ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 160 LEs              ; 192 LEs                ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|data[16]                              ;
+; 16:1               ; 11 bits   ; 110 LEs       ; 110 LEs              ; 0 LEs                  ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_alu_in:mux_alu_in_pm|Y0[24]                  ;
+; 16:1               ; 21 bits   ; 210 LEs       ; 210 LEs              ; 0 LEs                  ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_alu_in:mux_alu_in_pm|Y0[18]                  ;
+; 16:1               ; 11 bits   ; 110 LEs       ; 110 LEs              ; 0 LEs                  ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_alu_in:mux_alu_in_pm|Y1[28]                  ;
+; 16:1               ; 21 bits   ; 210 LEs       ; 210 LEs              ; 0 LEs                  ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|mux_alu_in:mux_alu_in_pm|Y1[18]                  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |top_SCA_DE0|SCA:mySCA|processor:prc|alu:alu_pm|bufint[31]                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|dBus2Pcr_MUX:dBusMux|state.key2Pcr                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|Key_IO:keys|dOut[2]                                            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|dBus2Pcr_MUX:dBusMux|Selector31                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|Selector11        ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState                                           ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState                                           ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|Key_IO:keys|keyState                                           ;
+; 23:1               ; 22 bits   ; 330 LEs       ; 330 LEs              ; 0 LEs                  ; No         ; |top_SCA_DE0|SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|NEXT_STATE.RSTATE ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component|altsyncram_ajh1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                               ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                      ;
++------------------------------------+----------------------+---------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                   ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                            ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                   ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                                   ;
+; WIDTH_A                            ; 32                   ; Signed Integer                                                            ;
+; WIDTHAD_A                          ; 13                   ; Signed Integer                                                            ;
+; NUMWORDS_A                         ; 8192                 ; Signed Integer                                                            ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                                   ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                   ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                   ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                   ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                   ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                   ;
+; WIDTH_B                            ; 1                    ; Untyped                                                                   ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                                                   ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                                                   ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                   ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                   ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                   ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                   ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                   ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                   ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                   ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                   ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                   ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                   ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                   ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                   ;
+; INIT_FILE                          ; SCAMIF.mif           ; Untyped                                                                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                   ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                   ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                   ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                   ;
+; DEVICE_FAMILY                      ; Cyclone III          ; Untyped                                                                   ;
+; CBXI_PARAMETER                     ; altsyncram_ajh1      ; Untyped                                                                   ;
++------------------------------------+----------------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                      ;
++------------------------+----------------+-----------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                   ;
+; CBXI_PARAMETER         ; lpm_divide_01p ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                            ;
++------------------------+----------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0 ;
++------------------------------------------------+-------------+-------------------------------------+
+; Parameter Name                                 ; Value       ; Type                                ;
++------------------------------------------------+-------------+-------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON          ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF         ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                            ; ON          ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF         ; IGNORE_CASCADE                      ;
+; LPM_WIDTHA                                     ; 32          ; Untyped                             ;
+; LPM_WIDTHB                                     ; 32          ; Untyped                             ;
+; LPM_WIDTHP                                     ; 64          ; Untyped                             ;
+; LPM_WIDTHR                                     ; 64          ; Untyped                             ;
+; LPM_WIDTHS                                     ; 1           ; Untyped                             ;
+; LPM_REPRESENTATION                             ; SIGNED      ; Untyped                             ;
+; LPM_PIPELINE                                   ; 0           ; Untyped                             ;
+; LATENCY                                        ; 0           ; Untyped                             ;
+; INPUT_A_IS_CONSTANT                            ; NO          ; Untyped                             ;
+; INPUT_B_IS_CONSTANT                            ; NO          ; Untyped                             ;
+; USE_EAB                                        ; OFF         ; Untyped                             ;
+; MAXIMIZE_SPEED                                 ; 5           ; Untyped                             ;
+; DEVICE_FAMILY                                  ; Cyclone III ; Untyped                             ;
+; CARRY_CHAIN                                    ; MANUAL      ; Untyped                             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT         ; TECH_MAPPER_APEX20K                 ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO        ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0           ; Untyped                             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0           ; Untyped                             ;
+; CBXI_PARAMETER                                 ; mult_r4t    ; Untyped                             ;
+; INPUT_A_FIXED_VALUE                            ; Bx          ; Untyped                             ;
+; INPUT_B_FIXED_VALUE                            ; Bx          ; Untyped                             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF         ; Untyped                             ;
++------------------------------------------------+-------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                     ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                    ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                        ;
+; Entity Instance                           ; SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                              ;
+;     -- WIDTH_A                            ; 32                                                                                       ;
+;     -- NUMWORDS_A                         ; 8192                                                                                     ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                   ;
+;     -- WIDTH_B                            ; 1                                                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                ;
++-------------------------------------------+------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                            ;
++---------------------------------------+---------------------------------------------------+
+; Name                                  ; Value                                             ;
++---------------------------------------+---------------------------------------------------+
+; Number of entity instances            ; 1                                                 ;
+; Entity Instance                       ; SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                                ;
+;     -- LPM_WIDTHB                     ; 32                                                ;
+;     -- LPM_WIDTHP                     ; 64                                                ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                            ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                ;
+;     -- USE_EAB                        ; OFF                                               ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                ;
++---------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "SCA:mySCA|dBus2Pcr_MUX:dBusMux" ;
++--------------------+-------+----------+--------------------+
+; Port               ; Type  ; Severity ; Details            ;
++--------------------+-------+----------+--------------------+
+; switch_val[31..10] ; Input ; Info     ; Stuck at GND       ;
++--------------------+-------+----------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm"                              ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; y[10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SCA:mySCA"                                                                                       ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; ac_test           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ir_test[27..6]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; addr_test[12..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc_test[31..10]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Jun 26 11:30:03 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SmallComputerArchitecture -c SCA
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/Downloads/top_SCA_DE0.vhd
+    Info (12022): Found design unit 1: top_SCA_DE0-struct
+    Info (12023): Found entity 1: top_SCA_DE0
+Info (12021): Found 2 design units, including 1 entities, in source file top_Mem_DE0.vhd
+    Info (12022): Found design unit 1: top_Mem_DE0-struct
+    Info (12023): Found entity 1: top_Mem_DE0
+Info (12021): Found 2 design units, including 0 entities, in source file /home/julian/altera/13.0.1/quartus/bin/types.vhd
+    Info (12022): Found design unit 1: SCA_types
+    Info (12022): Found design unit 2: SCA_types-body
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/spX.vhd
+    Info (12022): Found design unit 1: spX-behavior
+    Info (12023): Found entity 1: spX
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/register.vhd
+    Info (12022): Found design unit 1: register_std-behavior
+    Info (12023): Found entity 1: register_std
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/rb1X.vhd
+    Info (12022): Found design unit 1: rb1X-behavior
+    Info (12023): Found entity 1: rb1X
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/rb0X.vhd
+    Info (12022): Found design unit 1: rb0X-behavior
+    Info (12023): Found entity 1: rb0X
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/processor.vhd
+    Info (12022): Found design unit 1: processor-behavior
+    Info (12023): Found entity 1: processor
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/pcX.vhd
+    Info (12022): Found design unit 1: pcX-behavior
+    Info (12023): Found entity 1: pcX
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd
+    Info (12022): Found design unit 1: mux_alu_in-behavior
+    Info (12023): Found entity 1: mux_alu_in
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/mux_address.vhd
+    Info (12022): Found design unit 1: mux_address-behavior
+    Info (12023): Found entity 1: mux_address
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd
+    Info (12022): Found design unit 1: instruction_register-behavior
+    Info (12023): Found entity 1: instruction_register
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd
+    Info (12022): Found design unit 1: demux_alu_out-behavior
+    Info (12023): Found entity 1: demux_alu_out
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/decoder.vhd
+    Info (12022): Found design unit 1: decoder-behavior
+    Info (12023): Found entity 1: decoder
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/control_unit.vhd
+    Info (12022): Found design unit 1: control_unit-behavior
+    Info (12023): Found entity 1: control_unit
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/alu.vhd
+    Info (12022): Found design unit 1: alu-behavior
+    Info (12023): Found entity 1: alu
+Info (12021): Found 2 design units, including 1 entities, in source file /home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd
+    Info (12022): Found design unit 1: absolute_register-behavior
+    Info (12023): Found entity 1: absolute_register
+Info (12021): Found 2 design units, including 1 entities, in source file toy_XFSA.vhd
+    Info (12022): Found design unit 1: TOY_XFSA-BEHAVE
+    Info (12023): Found entity 1: TOY_XFSA
+Info (12021): Found 2 design units, including 0 entities, in source file SCA_types.vhd
+    Info (12022): Found design unit 1: types
+    Info (12022): Found design unit 2: types-body
+Info (12021): Found 2 design units, including 1 entities, in source file single_port_ram_with_init.vhd
+    Info (12022): Found design unit 1: single_port_ram_with_init-rtl
+    Info (12023): Found entity 1: single_port_ram_with_init
+Info (12021): Found 2 design units, including 1 entities, in source file memory.vhd
+    Info (12022): Found design unit 1: memory-behv
+    Info (12023): Found entity 1: memory
+Info (12021): Found 2 design units, including 1 entities, in source file address_decoder.vhd
+    Info (12022): Found design unit 1: address_decoder-table
+    Info (12023): Found entity 1: address_decoder
+Info (12021): Found 2 design units, including 1 entities, in source file LED_IO.vhd
+    Info (12022): Found design unit 1: LED_IO-reg
+    Info (12023): Found entity 1: LED_IO
+Info (12021): Found 2 design units, including 0 entities, in source file convDisp7.vhd
+    Info (12022): Found design unit 1: convdisp7
+    Info (12022): Found design unit 2: convdisp7-body
+Info (12021): Found 2 design units, including 1 entities, in source file HEX_IO.vhd
+    Info (12022): Found design unit 1: HEX_IO-registered
+    Info (12023): Found entity 1: HEX_IO
+Info (12021): Found 2 design units, including 1 entities, in source file key_IO.vhd
+    Info (12022): Found design unit 1: key_IO-reg
+    Info (12023): Found entity 1: Key_IO
+Info (12021): Found 2 design units, including 1 entities, in source file SCA.vhd
+    Info (12022): Found design unit 1: SCA-struct
+    Info (12023): Found entity 1: SCA
+Info (12021): Found 2 design units, including 1 entities, in source file dBus2Pcr_MUX.vhd
+    Info (12022): Found design unit 1: dBus2Pcr_MUX-buffered
+    Info (12023): Found entity 1: dBus2Pcr_MUX
+Info (12021): Found 2 design units, including 1 entities, in source file control_unit_2.vhd
+    Info (12022): Found design unit 1: control_unit_2-behavior
+    Info (12023): Found entity 1: control_unit_2
+Info (12021): Found 2 design units, including 1 entities, in source file MIFRAM.vhd
+    Info (12022): Found design unit 1: MIFRAM-rtl
+    Info (12023): Found entity 1: MIFRAM
+Info (12021): Found 2 design units, including 1 entities, in source file single_port_ram_mega_function.vhd
+    Info (12022): Found design unit 1: single_port_ram_mega_function-SYN
+    Info (12023): Found entity 1: single_port_ram_mega_function
+Info (12127): Elaborating entity "top_SCA_DE0" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top_SCA_DE0.vhd(33): object "ac_test" assigned a value but never read
+Info (12128): Elaborating entity "SCA" for hierarchy "SCA:mySCA"
+Warning (10541): VHDL Signal Declaration warning at SCA.vhd(18): used implicit default value for signal "ac_test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at SCA.vhd(18): used implicit default value for signal "ir_test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at SCA.vhd(20): used implicit default value for signal "pc_test" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "processor" for hierarchy "SCA:mySCA|processor:prc"
+Warning (10036): Verilog HDL or VHDL warning at processor.vhd(336): object "X1data" assigned a value but never read
+Info (12128): Elaborating entity "register_std" for hierarchy "SCA:mySCA|processor:prc|register_std:\GEN_REG:0:REGX"
+Warning (10492): VHDL Process Statement warning at register.vhd(37): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "mux_address" for hierarchy "SCA:mySCA|processor:prc|mux_address:mux_address_pm"
+Info (12128): Elaborating entity "mux_alu_in" for hierarchy "SCA:mySCA|processor:prc|mux_alu_in:mux_alu_in_pm"
+Info (12128): Elaborating entity "alu" for hierarchy "SCA:mySCA|processor:prc|alu:alu_pm"
+Info (12128): Elaborating entity "demux_alu_out" for hierarchy "SCA:mySCA|processor:prc|demux_alu_out:demux_alu_out_pm"
+Info (12128): Elaborating entity "instruction_register" for hierarchy "SCA:mySCA|processor:prc|instruction_register:instruction_register_pm"
+Info (12128): Elaborating entity "decoder" for hierarchy "SCA:mySCA|processor:prc|decoder:decoder_pm"
+Info (12128): Elaborating entity "control_unit_2" for hierarchy "SCA:mySCA|processor:prc|control_unit_2:control_unit_pm"
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(131): signal "CURRENT_STATE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(170): signal "spx_pcx_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(174): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(191): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(193): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(194): signal "spx_pcx_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(195): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(196): signal "absolute_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(206): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(207): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(208): signal "spx_pcx_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(209): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(211): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(215): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(228): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(232): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(244): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(245): signal "alu_in2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(246): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(247): signal "spx_pcx_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(248): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(251): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(255): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(266): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(267): signal "alu_in2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(268): signal "alu_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(269): signal "spx_pcx_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(270): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(271): signal "absolute_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(274): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(275): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(281): signal "alu_in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(282): signal "alu_in2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(283): signal "spx_pcx_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(284): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at control_unit_2.vhd(332): signal "instruction_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "spx_reset", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "pcx_reset", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "writeMemory", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "readMemory", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "mux_address_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "instruction_register_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "pcx_increment", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "spx_decrement", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "register_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "pcX_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "spX_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "rb0X_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "rb1X_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "demux_alu_out_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "mux_alu_in_ctrl0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "alu_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "absolute_register", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "absolute_register_ctrl", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at control_unit_2.vhd(120): inferring latch(es) for signal or variable "mux_alu_in_ctrl1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "mux_alu_in_ctrl1[0]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl1[1]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl1[2]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl1[3]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[0]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[1]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[2]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[3]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[4]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[5]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[6]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[7]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[8]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[9]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[10]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[11]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[12]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[13]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[14]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[15]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[16]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[17]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[18]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[19]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[20]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[21]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[22]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[23]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[24]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[25]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[26]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[27]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[28]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[29]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[30]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "absolute_register[31]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "alu_ctrl[0]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "alu_ctrl[1]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "alu_ctrl[2]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "alu_ctrl[3]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "alu_ctrl[4]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl0[0]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl0[1]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl0[2]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_alu_in_ctrl0[3]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "demux_alu_out_ctrl[0]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "demux_alu_out_ctrl[1]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "demux_alu_out_ctrl[2]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "demux_alu_out_ctrl[3]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "rb1X_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "rb0X_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "spX_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "pcX_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "register_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "spx_decrement" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "pcx_increment" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "instruction_register_ctrl" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_address_ctrl[0]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "mux_address_ctrl[1]" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "readMemory" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "writeMemory" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "pcx_reset" at control_unit_2.vhd(120)
+Info (10041): Inferred latch for "spx_reset" at control_unit_2.vhd(120)
+Info (12128): Elaborating entity "absolute_register" for hierarchy "SCA:mySCA|processor:prc|absolute_register:absolute_register_pm"
+Warning (10492): VHDL Process Statement warning at absolute_register.vhd(37): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "spX" for hierarchy "SCA:mySCA|processor:prc|spX:spX_register_pm"
+Warning (10492): VHDL Process Statement warning at spX.vhd(31): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at spX.vhd(50): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at spX.vhd(51): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "pcX" for hierarchy "SCA:mySCA|processor:prc|pcX:pcX_register_pm"
+Warning (10492): VHDL Process Statement warning at pcX.vhd(31): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pcX.vhd(49): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at pcX.vhd(50): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "rb0X" for hierarchy "SCA:mySCA|processor:prc|rb0X:rb0X_register_pm"
+Warning (10492): VHDL Process Statement warning at rb0X.vhd(38): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rb0X.vhd(39): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "rb1X" for hierarchy "SCA:mySCA|processor:prc|rb1X:rb1X_register_pm"
+Warning (10492): VHDL Process Statement warning at rb1X.vhd(38): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at rb1X.vhd(39): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "memory" for hierarchy "SCA:mySCA|memory:mem"
+Info (12128): Elaborating entity "single_port_ram_mega_function" for hierarchy "SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "SCAMIF.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone III"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "8192"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "13"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ajh1.tdf
+    Info (12023): Found entity 1: altsyncram_ajh1
+Info (12128): Elaborating entity "altsyncram_ajh1" for hierarchy "SCA:mySCA|memory:mem|single_port_ram_mega_function:sprwi|altsyncram:altsyncram_component|altsyncram_ajh1:auto_generated"
+Critical Warning (127005): Memory depth (8192) in the design file differs from memory depth (8) in the Memory Initialization File "/home/julian/Dokumente/SmallComputerArchitecture_restored/SCAMIF.mif" -- setting initial value for remaining addresses to 0
+Info (12128): Elaborating entity "address_decoder" for hierarchy "SCA:mySCA|address_decoder:addrDec"
+Info (12128): Elaborating entity "dBus2Pcr_MUX" for hierarchy "SCA:mySCA|dBus2Pcr_MUX:dBusMux"
+Warning (10631): VHDL Process Statement warning at dBus2Pcr_MUX.vhd(21): inferring latch(es) for signal or variable "state", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "state.key2Pcr" at dBus2Pcr_MUX.vhd(26)
+Info (10041): Inferred latch for "state.switch2Pcr" at dBus2Pcr_MUX.vhd(26)
+Info (10041): Inferred latch for "state.mem2Pcr" at dBus2Pcr_MUX.vhd(26)
+Info (12128): Elaborating entity "LED_IO" for hierarchy "SCA:mySCA|LED_IO:Leds"
+Info (12128): Elaborating entity "HEX_IO" for hierarchy "SCA:mySCA|HEX_IO:HexDisp"
+Info (12128): Elaborating entity "Key_IO" for hierarchy "SCA:mySCA|Key_IO:keys"
+Warning (10492): VHDL Process Statement warning at key_IO.vhd(63): signal "keyPins" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at key_IO.vhd(65): signal "keyPins" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at key_IO.vhd(67): signal "key_edge_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at key_IO.vhd(60): inferring latch(es) for signal or variable "dOut", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "dOut[0]" at key_IO.vhd(60)
+Info (10041): Inferred latch for "dOut[1]" at key_IO.vhd(60)
+Info (10041): Inferred latch for "dOut[2]" at key_IO.vhd(60)
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer clock
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SCA:mySCA|processor:prc|alu:alu_pm|Div0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "SCA:mySCA|processor:prc|alu:alu_pm|Mult0"
+Info (12130): Elaborated megafunction instantiation "SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0"
+Info (12133): Instantiated megafunction "SCA:mySCA|processor:prc|alu:alu_pm|lpm_divide:Div0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_01p.tdf
+    Info (12023): Found entity 1: lpm_divide_01p
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t8f.tdf
+    Info (12023): Found entity 1: alt_u_div_t8f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info (12023): Found entity 1: add_sub_unc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info (12023): Found entity 1: add_sub_vnc
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_9v9.tdf
+    Info (12023): Found entity 1: lpm_abs_9v9
+Info (12130): Elaborated megafunction instantiation "SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0"
+Info (12133): Instantiated megafunction "SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_r4t.tdf
+    Info (12023): Found entity 1: mult_r4t
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0|mult_r4t:auto_generated|mac_mult7"
+        Warning (14320): Synthesized away node "SCA:mySCA|processor:prc|alu:alu_pm|lpm_mult:Mult0|mult_r4t:auto_generated|mac_out8"
+Info (13014): Ignored 146 buffer(s)
+    Info (13016): Ignored 62 CARRY_SUM buffer(s)
+    Info (13019): Ignored 84 SOFT buffer(s)
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|rb1X_ctrl" merged with LATCH primitive "SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|rb0X_ctrl"
+    Info (13026): Duplicate LATCH primitive "SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|pcx_reset" merged with LATCH primitive "SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|spx_reset"
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|demux_alu_out_ctrl[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|rb0X_ctrl has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|spx_decrement has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|spx_reset has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|pcX_ctrl has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|alu_ctrl[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT
+Warning (13012): Latch SCA:mySCA|Key_IO:keys|dOut[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BUTTON[0]
+Warning (13012): Latch SCA:mySCA|Key_IO:keys|dOut[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BUTTON[0]
+Warning (13012): Latch SCA:mySCA|Key_IO:keys|dOut[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal BUTTON[0]
+Warning (13012): Latch SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|absolute_register_ctrl has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.WAIT_2SEC
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX3_D[7]" is stuck at VCC
+    Warning (13410): Pin "HEX2_D[7]" is stuck at VCC
+    Warning (13410): Pin "HEX1_D[7]" is stuck at VCC
+    Warning (13410): Pin "HEX0_D[7]" is stuck at VCC
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register cnt[10] will power up to High
+    Critical Warning (18010): Register cnt[8] will power up to High
+    Critical Warning (18010): Register cnt[5] will power up to High
+    Critical Warning (18010): Register cnt[18] will power up to High
+    Critical Warning (18010): Register cnt[13] will power up to High
+    Critical Warning (18010): Register cnt[7] will power up to High
+    Critical Warning (18010): Register cnt[21] will power up to High
+    Critical Warning (18010): Register cnt[17] will power up to High
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 3931 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 3837 logic cells
+    Info (21064): Implemented 32 RAM segments
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 133 warnings
+    Info: Peak virtual memory: 704 megabytes
+    Info: Processing ended: Mon Jun 26 11:30:10 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+

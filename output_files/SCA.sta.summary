@@ -1,0 +1,389 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -115.276
+TNS   : -6760.107
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : -6.387
+TNS   : -64.685
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : -6.170
+TNS   : -17.634
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : -6.160
+TNS   : -45.403
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : -5.940
+TNS   : -35.910
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : -5.290
+TNS   : -16.044
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : -3.839
+TNS   : -20.926
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : -3.764
+TNS   : -87.301
+
+Type  : Slow 1200mV 85C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : -3.476
+TNS   : -6.486
+
+Type  : Slow 1200mV 85C Model Setup 'BUTTON[0]'
+Slack : -1.350
+TNS   : -4.034
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -5.277
+TNS   : -355.127
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : -3.012
+TNS   : -16.780
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : -2.993
+TNS   : -15.095
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : -2.772
+TNS   : -5.942
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : -2.713
+TNS   : -21.289
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : -2.531
+TNS   : -19.964
+
+Type  : Slow 1200mV 85C Model Hold 'BUTTON[0]'
+Slack : -2.477
+TNS   : -7.422
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : -2.257
+TNS   : -14.394
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : -2.195
+TNS   : -7.888
+
+Type  : Slow 1200mV 85C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : -1.929
+TNS   : -5.354
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -1.102
+TNS   : -39.739
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : -1.492
+TNS   : -30.275
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -1633.272
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BUTTON[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : 0.384
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -102.792
+TNS   : -5870.650
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : -5.724
+TNS   : -59.214
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : -5.518
+TNS   : -41.867
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : -5.513
+TNS   : -15.781
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : -5.301
+TNS   : -32.717
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : -4.722
+TNS   : -14.298
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : -3.539
+TNS   : -19.288
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : -3.425
+TNS   : -81.952
+
+Type  : Slow 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : -3.173
+TNS   : -5.911
+
+Type  : Slow 1200mV 0C Model Setup 'BUTTON[0]'
+Slack : -1.214
+TNS   : -3.617
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -4.865
+TNS   : -346.344
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : -2.721
+TNS   : -15.027
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : -2.623
+TNS   : -13.446
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : -2.500
+TNS   : -5.381
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : -2.374
+TNS   : -18.649
+
+Type  : Slow 1200mV 0C Model Hold 'BUTTON[0]'
+Slack : -2.211
+TNS   : -6.631
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : -2.203
+TNS   : -17.511
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : -1.987
+TNS   : -12.813
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : -1.956
+TNS   : -7.181
+
+Type  : Slow 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : -1.771
+TNS   : -4.881
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.868
+TNS   : -29.623
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : -1.403
+TNS   : -34.906
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -1633.272
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BUTTON[0]'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -65.493
+TNS   : -3463.789
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : -3.425
+TNS   : -33.231
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : -3.330
+TNS   : -9.003
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : -3.302
+TNS   : -22.939
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : -3.184
+TNS   : -17.772
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : -2.805
+TNS   : -7.990
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : -2.055
+TNS   : -11.063
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : -1.995
+TNS   : -41.481
+
+Type  : Fast 1200mV 0C Model Setup 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : -1.832
+TNS   : -3.448
+
+Type  : Fast 1200mV 0C Model Setup 'BUTTON[0]'
+Slack : -0.301
+TNS   : -0.898
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -3.120
+TNS   : -280.486
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : -1.757
+TNS   : -8.647
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : -1.751
+TNS   : -10.021
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : -1.599
+TNS   : -3.401
+
+Type  : Fast 1200mV 0C Model Hold 'BUTTON[0]'
+Slack : -1.593
+TNS   : -4.773
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : -1.590
+TNS   : -12.636
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : -1.538
+TNS   : -11.876
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : -1.335
+TNS   : -8.102
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : -1.240
+TNS   : -4.430
+
+Type  : Fast 1200mV 0C Model Hold 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : -0.986
+TNS   : -2.714
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.761
+TNS   : -30.741
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : -0.996
+TNS   : -20.581
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -1528.203
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BUTTON[0]'
+Slack : -3.000
+TNS   : -3.011
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.STOREA'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMP'
+Slack : 0.274
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.HALT'
+Slack : 0.279
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.JUMPZ'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.EXECUTE'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_8'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_3'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SCA:mySCA|processor:prc|control_unit_2:control_unit_pm|CURRENT_STATE.FETCH_1'
+Slack : 0.438
+TNS   : 0.000
+
+------------------------------------------------------------

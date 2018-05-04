@@ -1,0 +1,188 @@
+library ieee;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use work.types.all;
+
+
+
+  
+entity control_unit is
+
+ Port(
+	-- inputs -- 
+	 clk: in std_ulogic; 		-- system clock
+    	 instruction_in : in std_logic_vector(4 downto 0);		-- 5 Bit instruction
+	 spx_pcx_in : in std_logic_vector (1 downto 0);			-- 2 Bit pcX / spX / rb0 / rb1
+	 absolute_in : in std_logic_vector (16 downto 0);		-- see for example ISA : store command		
+	 arith_in : in std_logic_vector (12 downto 0 );			-- see for example ISA : ADDA command
+	 alu_in1 : in std_logic_vector (3 downto 0);			
+	 alu_in2 : in std_logic_vector (3 downto 0);
+	 alu_out : in std_logic_vector (3 downto 0 );
+	 
+	 
+	 RESET              : in    std_logic;                           -- reset
+	
+	-- outputs --
+		
+		register_ctrl : out std_logic;			-- read / write ; eine 1 fuer write 
+		writeMemory : out std_logic;                  -- processor wants to write on memory
+		readMemory : out std_logic;                   -- processor wants to read on memory
+		
+		mux_alu_in_ctrl0 : out std_logic_vector (3 downto 0 ); -- hier muss alu_in1 draufgelegt werden
+		mux_alu_in_ctrl1 : out std_logic_vector (3 downto 0 );	-- hier muss alu_in2 draufgelegt werden
+		
+		demux_alu_out_ctrl: out std_logic_vector (3 downto 0);	-- hier muss alu_out draufgelegt werden
+		
+		mux_address_ctrl: out std_logic_vector (1 downto 0 );	-- hier musss spx_pcx_in draufgelegt werden
+		
+		alu_ctrl: out std_logic_vector (4 downto 0);				-- hier muss instruction_in draufgelegt werden
+		
+		absolute_register : out word -- hier koennen absolute Werte uebergeben werden
+		
+    );
+
+end entity control_unit;
+
+architecture behavior of control_unit is
+
+
+    -- define state-type
+    type TSTATE is
+    (
+	    FETCH,  -- Einlesen der Siganale (Startzustand)
+        STOREA, -- StoreA
+        TYP_1,  -- LOAD, MOV
+        TYP_2,  -- ADDR, ADDR, SUBR, MULR, DIVR, OR, AND
+        TYP_3,  -- ADDA, SUBA, MULA, DIVA
+        JUMP,   -- JUPMP
+        JUMPZ,  -- JUMPZ
+        HALT,   -- HALT
+		
+		WAIT_1SEC, -- Wartet noch eine Sequenz
+		WAIT_2SEC, -- Wartet noch 2 Sequenzen
+		WAIT_3SEC, -- Wartet noch 3 Sequenzen
+		WAIT_4SEC, -- Wartet noch 4 Sequenzen
+		WAIT_5SEC -- Wartet noch 5 Sequenzen
+    );
+    signal CURRENT_STATE, NEXT_STATE : TSTATE;
+    constant RESET_STATE : TSTATE := FETCH;
+	
+	
+	
+
+begin
+
+
+    NEXT_STATE <=
+        FETCH  when CURRENT_STATE = STOREA else
+        FETCH when CURRENT_STATE = TYP_1  else
+        FETCH  when CURRENT_STATE = TYP_2  else
+        FETCH when CURRENT_STATE = TYP_3  else
+        FETCH  when CURRENT_STATE = JUMP   else
+        FETCH  when CURRENT_STATE = JUMPZ  else
+        FETCH  when CURRENT_STATE = HALT   else 
+        STOREA when CURRENT_STATE = FETCH  and (instruction_in="00000") else
+        TYP_1  when CURRENT_STATE = FETCH  and (instruction_in="00001" or instruction_in="00010") else
+        TYP_2  when CURRENT_STATE = FETCH  and (instruction_in="00011" or instruction_in="00101" or instruction_in="00111" or instruction_in="01001" or instruction_in="01011" or instruction_in="01100" ) else
+        TYP_3  when CURRENT_STATE = FETCH  and (instruction_in="00100" or instruction_in="00110" or instruction_in="01000" or instruction_in="01010") else
+        JUMP   when CURRENT_STATE = FETCH  and (instruction_in="01101") else
+        JUMPZ  when CURRENT_STATE = FETCH  and (instruction_in="01110") else
+        HALT   when CURRENT_STATE = FETCH  and (instruction_in="01111") else
+		
+		WAIT_1SEC when CURRENT_STATE = WAIT_2SEC else
+		WAIT_2SEC when CURRENT_STATE = WAIT_3SEC else
+		WAIT_3SEC when CURRENT_STATE = WAIT_4SEC else
+		WAIT_4SEC when CURRENT_STATE = WAIT_5SEC else
+        CURRENT_STATE;
+
+    process(clk, RESET, NEXT_STATE) is
+    begin
+        if RESET='1' then
+            CURRENT_STATE <= RESET_STATE;
+        elsif clk'event and clk='1' then
+            CURRENT_STATE <= NEXT_STATE;
+        end if;
+    
+
+    --Definition des Verhaltens hinsichtlich
+    --der Ausgabe
+    CASE CURRENT_STATE IS
+	WHEN STOREA => 
+		if(alu_in1 = "1111") then  -- fals auf den Speicher geschrieben werden soll, wird writeMemory auf 1 gestellt
+			writeMemory <= '1';
+			readMemory <= '0';
+		else
+			writeMemory <= '0';
+			readMemory <= '0';
+		end if;
+		
+		register_ctrl <= '1';
+		mux_alu_in_ctrl0 <= alu_in1;
+		demux_alu_out_ctrl <= alu_out;
+        mux_address_ctrl <= spx_pcx_in;
+		alu_ctrl <= instruction_in;
+		absolute_register <= word("000000000000000"&absolute_in);
+	WHEN TYP_1 =>
+		register_ctrl <= '0';
+		mux_alu_in_ctrl0 <= alu_in1;
+		demux_alu_out_ctrl <= alu_out;
+                mux_address_ctrl <= spx_pcx_in;
+		alu_ctrl <= instruction_in;
+	WHEN TYP_2 =>
+	
+		if(alu_in1 = "1111") then  -- fals auf den Speicher geschrieben werden soll, wird writeMemory auf 1 gestellt
+			writeMemory <= '1';
+			readMemory <= '0';
+		else
+			writeMemory <= '0';
+			readMemory <= '0';
+		end if;
+		
+		
+		register_ctrl <= '1';
+		mux_alu_in_ctrl0 <= alu_in1;
+		mux_alu_in_ctrl1 <= alu_in2;
+		demux_alu_out_ctrl <= alu_out;
+		mux_address_ctrl <= spx_pcx_in;
+		alu_ctrl <= instruction_in;
+	WHEN TYP_3 =>
+	
+	    if(alu_in1 = "1111") then  -- fals auf den Speicher geschrieben werden soll, wird writeMemory auf 1 gestellt
+			writeMemory <= '1';
+			readMemory <= '0';
+		else
+			writeMemory <= '0';
+			readMemory <= '0';
+		end if;
+		
+		
+		register_ctrl <= '1';
+		mux_alu_in_ctrl0 <= alu_in1;
+		mux_alu_in_ctrl1 <= alu_in2;
+		demux_alu_out_ctrl <= alu_out;
+		mux_address_ctrl <= spx_pcx_in;
+		alu_ctrl <= instruction_in;
+		absolute_register <= word("0000000000000000000"&arith_in);
+	WHEN JUMP =>
+		mux_alu_in_ctrl0 <= alu_in1;
+		alu_ctrl <= instruction_in;
+	WHEN JUMPZ =>
+		mux_alu_in_ctrl0 <= alu_in1;
+		mux_alu_in_ctrl1 <= alu_in2;
+		mux_address_ctrl <= spx_pcx_in;
+		alu_ctrl <= instruction_in;
+	WHEN HALT =>
+		alu_ctrl <= instruction_in;
+	WHEN OTHERS =>
+		alu_ctrl <= instruction_in;
+    END CASE;
+
+
+    end process; 
+
+
+end behavior;
+
+
+
+

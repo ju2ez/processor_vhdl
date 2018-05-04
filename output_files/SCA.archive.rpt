@@ -1,0 +1,131 @@
+Archive Project report for SCA
+Tue Jun 27 15:03:39 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue Jun 27 15:03:39 2017 ;
+; Revision Name          ; SCA                                   ;
+; Top-level Entity Name  ; top_SCA_DE0                           ;
+; Family                 ; Cyclone III                           ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/home/julian/Schreibtisch/processor_final_team_3.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'SCA.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/julian/altera/13.0.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 620 megabytes
+    Info: Processing ended: Tue Jun 27 15:03:39 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-----------------------------------------------------------------+
+; Files Archived                                                  ;
++-----------------------------------------------------------------+
+; File Name                                                       ;
++-----------------------------------------------------------------+
+; ../../altera/13.0.1/quartus/bin/absolute_register.vhd           ;
+; ../../altera/13.0.1/quartus/bin/alu.vhd                         ;
+; ../../altera/13.0.1/quartus/bin/control_unit.vhd                ;
+; ../../altera/13.0.1/quartus/bin/decoder.vhd                     ;
+; ../../altera/13.0.1/quartus/bin/demux_alu_out.vhd               ;
+; ../../altera/13.0.1/quartus/bin/instruction_register.vhd        ;
+; ../../altera/13.0.1/quartus/bin/mux_address.vhd                 ;
+; ../../altera/13.0.1/quartus/bin/mux_alu_in.vhd                  ;
+; ../../altera/13.0.1/quartus/bin/pcX.vhd                         ;
+; ../../altera/13.0.1/quartus/bin/processor.vhd                   ;
+; ../../altera/13.0.1/quartus/bin/rb0X.vhd                        ;
+; ../../altera/13.0.1/quartus/bin/rb1X.vhd                        ;
+; ../../altera/13.0.1/quartus/bin/register.vhd                    ;
+; ../../altera/13.0.1/quartus/bin/spX.vhd                         ;
+; ../../altera/13.0.1/quartus/bin/types.vhd                       ;
+; ../../Downloads/top_SCA_DE0.vhd                                 ;
+; /home/julian/altera/13.0.1/quartus/bin/absolute_register.vhd    ;
+; /home/julian/altera/13.0.1/quartus/bin/alu.vhd                  ;
+; /home/julian/altera/13.0.1/quartus/bin/control_unit.vhd         ;
+; /home/julian/altera/13.0.1/quartus/bin/decoder.vhd              ;
+; /home/julian/altera/13.0.1/quartus/bin/demux_alu_out.vhd        ;
+; /home/julian/altera/13.0.1/quartus/bin/instruction_register.vhd ;
+; /home/julian/altera/13.0.1/quartus/bin/mux_address.vhd          ;
+; /home/julian/altera/13.0.1/quartus/bin/mux_alu_in.vhd           ;
+; /home/julian/altera/13.0.1/quartus/bin/pcX.vhd                  ;
+; /home/julian/altera/13.0.1/quartus/bin/processor.vhd            ;
+; /home/julian/altera/13.0.1/quartus/bin/rb0X.vhd                 ;
+; /home/julian/altera/13.0.1/quartus/bin/rb1X.vhd                 ;
+; /home/julian/altera/13.0.1/quartus/bin/register.vhd             ;
+; /home/julian/altera/13.0.1/quartus/bin/spX.vhd                  ;
+; /home/julian/altera/13.0.1/quartus/bin/types.vhd                ;
+; /home/julian/Downloads/top_SCA_DE0.vhd                          ;
+; address_decoder.vhd                                             ;
+; assignment_defaults.qdf                                         ;
+; control_unit_2.vhd                                              ;
+; convDisp7.vhd                                                   ;
+; db/SCA.sim.vwf                                                  ;
+; dBus2Pcr_MUX.vhd                                                ;
+; HEX_IO.vhd                                                      ;
+; incremental_db/compiled_partitions/SCA.db_info                  ;
+; key_IO.vhd                                                      ;
+; LED_IO.vhd                                                      ;
+; memory.vhd                                                      ;
+; MIFRAM.vhd                                                      ;
+; output_files/SCA_Test.mif                                       ;
+; SCA.qsf                                                         ;
+; SCA.vhd                                                         ;
+; SCA_types.vhd                                                   ;
+; SCAMIF.mif                                                      ;
+; single_port_ram_mega_function.cmp                               ;
+; single_port_ram_mega_function.qip                               ;
+; single_port_ram_mega_function.vhd                               ;
+; single_port_ram_with_init.vhd                                   ;
+; SmallComputerArchitecture.qpf                                   ;
+; test_tb.vhd                                                     ;
+; testKeys.vwf                                                    ;
+; testMem.vwf                                                     ;
+; top_Mem_DE0.vhd                                                 ;
+; toy_XFSA.vhd                                                    ;
++-----------------------------------------------------------------+
+
+

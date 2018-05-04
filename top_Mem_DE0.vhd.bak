@@ -1,0 +1,91 @@
+--
+-- test unit for memory
+--
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+library work;
+use work.SCA_types.all;
+use work.convDisp7.all;
+
+
+entity top_Mem_DE0 is
+  -- names of DE0 inputs/outputs
+    Port ( CLOCK_50 : in std_logic;			-- the system clock of DE2
+           BUTTON : in std_logic_vector(2 downto 0);
+           SW : in std_logic_vector(9 downto 0);
+           HEX3_D, HEX2_D, HEX1_D, HEX0_D : out std_logic_vector(0 to 7);
+           LEDG: out std_logic_vector(9 downto 0)
+           );
+end top_Mem_DE0;
+
+architecture struct of top_Mem_DE0 is
+ component memory is
+ port(clk, reset: in std_logic;
+      rd, wr: in std_logic;
+      addr: in address;
+      dataIn: in word;
+      dataOut: out word
+      -- test
+      ;addr2mem: out natural range 0 to memsize-1 -- memory address      
+      );
+ end component;
+ signal reset, rd: std_logic;
+ signal clk1Hz: std_logic;
+ signal addr: address;
+ signal dataIn, dataOut: word;
+ signal addr2mem: natural range 0 to memsize-1;
+begin
+ reset <= not Button(0);
+ prescaler: process(CLOCK_50, reset) is
+  constant rate: natural := 25000000; -- devides down to 1 Hz
+  variable cnt: natural range rate-1 downto 0;
+ begin
+  if reset = '1' then
+   clk1Hz <= '0';
+   cnt := rate-1;
+  elsif rising_edge(CLOCK_50) then
+   if (cnt > 0) then
+    cnt := cnt - 1;
+   else
+    clk1Hz <= not clk1Hz;
+    cnt := rate-1;
+   end if;
+  end if;
+ end process;
+ reader: process(reset, clk1Hz) is
+  variable cnt: natural range 0 to memsize-1 := 0;
+ begin
+  if reset = '1' then
+   cnt := 0;
+  elsif rising_edge(clk1Hz) then
+   if cnt < memsize-1 then
+    cnt := cnt + 1;
+   else
+    cnt := 0;
+   end if;
+  end if;
+  addr <= to_unsigned(cnt, addrwidth);
+ end process;
+ dut: memory port map (
+  clk => CLOCK_50, 
+  reset=>reset,
+  rd => clk1Hz, 
+  wr => '0',
+  addr => addr,
+  dataIn => (others => '0'),
+  dataOut => dataOut
+  -- test
+  ,addr2mem => addr2mem);
+ LEDG <= std_logic_vector(addr(9 downto 0));
+ HEX0_D <= bcd2segm7(std_logic_vector(dataout(3 downto 0)));
+ HEX1_D <= bcd2segm7(std_logic_vector(dataout(7 downto 4))); 
+ HEX2_D <= bcd2segm7(std_logic_vector(dataout(11 downto 8)));
+ HEX3_D <= bcd2segm7(std_logic_vector(dataout(31 downto 28))); 
+
+end struct; 
+ 
+   
+ 
